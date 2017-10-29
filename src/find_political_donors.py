@@ -100,9 +100,9 @@ def by_date(output_path_date,df):
 
 if __name__ == "__main__":
     #get current document address
-    local_address=os.path.abspath(os.path.join(os.path.dirname('find_political_donors.py'),os.path.pardir)) 
-    data=get_data(local_address+'/input/itcont.txt')
+    #local_address=os.path.abspath(os.path.join(os.path.dirname('find_political_donors.py'),os.path.pardir)) 
+    data=get_data('input/itcont.txt')
     df=process_data(data,'zip')
-    by_zip(local_address+'/output/medianvals_by_zip.txt',df)
+    by_zip('output/medianvals_by_zip.txt',df)
     df=process_data(data,'date')
-    by_date(local_address+'/output/medianvals_by_date.txt',df)
+    by_date('output/medianvals_by_date.txt',df)
