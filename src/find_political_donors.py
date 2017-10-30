@@ -100,7 +100,6 @@ def by_date(output_path_date,df):
 
 if __name__ == "__main__":
     #get current document address
-    #local_address=os.path.abspath(os.path.join(os.path.dirname('find_political_donors.py'),os.path.pardir)) 
     data=get_data('input/itcont.txt')
     df=process_data(data,'zip')
     by_zip('output/medianvals_by_zip.txt',df)
